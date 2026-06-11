@@ -7,15 +7,15 @@ from sklearn.metrics import accuracy_score, classification_report
 import joblib
 import os
 
-# Define paths
-DATA_DIR = r"d:\ML"
-DATA_FILE = os.path.join(DATA_DIR, "processed_dataset.csv")
+# Define Paths
+DATA_DIR = os.path.dirname(os.path.abspath(__file__))
+PROCESSED_FILE = os.path.join(DATA_DIR, "processed_dataset.csv")
 MODEL_FILE = os.path.join(DATA_DIR, "fifa_model.pkl")
 
 def train():
     print("Step 1: Loading Processed Data")
     # We load the data we cleaned in data_prep.py
-    df = pd.read_csv(DATA_FILE)
+    df = pd.read_csv(PROCESSED_FILE)
     
     # We drop any remaining missing values just in case
     df = df.dropna(subset=['elo_difference', 'target'])

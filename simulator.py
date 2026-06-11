@@ -4,7 +4,7 @@ import joblib
 import os
 
 # Define Paths
-DATA_DIR = r"d:\ML"
+DATA_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_FILE = os.path.join(DATA_DIR, "fifa_model.pkl")
 ELO_FILE = os.path.join(DATA_DIR, "elo_ratings_wc2026.csv")
 SCHEDULE_FILE = os.path.join(DATA_DIR, "schedule_2026.csv")

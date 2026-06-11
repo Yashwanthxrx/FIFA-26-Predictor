@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 import os
 
-# Define the paths to our datasets
-DATA_DIR = r"d:\ML"
+# Define Paths
+DATA_DIR = os.path.dirname(os.path.abspath(__file__))
 MATCHES_FILE = os.path.join(DATA_DIR, "matches_1930_2022.csv")
 ELO_FILE = os.path.join(DATA_DIR, "elo_ratings_wc2026.csv")
 FIFA_RANK_FILE = os.path.join(DATA_DIR, "fifa_ranking_2026-06-08.csv")

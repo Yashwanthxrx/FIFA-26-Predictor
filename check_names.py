@@ -1,7 +1,8 @@
 import pandas as pd
 import os
 
-DATA_DIR = r"d:\ML"
+# Define Paths
+DATA_DIR = os.path.dirname(os.path.abspath(__file__))
 MATCHES_FILE = os.path.join(DATA_DIR, "matches_1930_2022.csv")
 ELO_FILE = os.path.join(DATA_DIR, "elo_ratings_wc2026.csv")
 
